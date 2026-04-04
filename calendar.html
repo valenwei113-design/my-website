@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>数字游民日历 · 魏蓝 Valen</title>
+  <title>Calendar · Valen Wei</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
@@ -25,19 +25,22 @@
 </head>
 <body class="bg-stone-50 text-stone-800 min-h-screen">
 
-  <!-- 导航 -->
+  <!-- Nav -->
   <nav class="fixed top-0 w-full bg-stone-50/90 backdrop-blur-sm z-10 border-b border-stone-200">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-sm font-light text-stone-400 hover:text-stone-700 transition-colors">← 返回首页</a>
-      <span class="text-sm font-light tracking-widest text-stone-400" style="font-family:'Playfair Display',serif;">数字游民日历</span>
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-center items-center gap-8 text-sm text-stone-500 font-light">
+      <a href="index.html" class="hover:text-stone-800 transition-colors">Home</a>
+      <a href="travel.html" class="hover:text-stone-800 transition-colors">Travel</a>
+      <a href="hobbies.html" class="hover:text-stone-800 transition-colors">Hobbies</a>
+      <a href="projects.html" class="hover:text-stone-800 transition-colors">Projects</a>
+      <a href="calendar.html" class="text-stone-800 font-medium">Calendar</a>
     </div>
   </nav>
 
   <main class="max-w-5xl mx-auto px-6 pt-32 pb-24">
 
-    <p class="text-xs tracking-widest uppercase text-stone-400 mb-4">Digital Nomad</p>
-    <h1 class="text-5xl font-bold text-stone-900 mb-4">数字游民日历</h1>
-    <p class="text-stone-400 font-light mb-16 max-w-lg">按月记录我的移居足迹，从 2024 年开始。</p>
+    <p class="text-xs tracking-widests uppercase text-stone-400 mb-4">Digital Nomad</p>
+    <h1 class="text-5xl font-bold text-stone-900 mb-4">Nomad Calendar</h1>
+    <p class="text-stone-400 font-light mb-16 max-w-lg">A monthly record of my nomadic journey, starting from 2024.</p>
 
     <div class="overflow-x-auto">
       <table class="border-collapse" style="min-width:480px;">
@@ -52,87 +55,86 @@
         <tbody>
           <tr>
             <td class="mth py-1">Jan</td>
-            <td class="p-1"><div class="cal cal-cn">上海</div></td>
-            <td class="p-1"><div class="cal cal-sea">墨尔本<br/>塔斯马尼亚</div></td>
-            <td class="p-1"><div class="cal cal-cn">山东</div></td>
+            <td class="p-1"><div class="cal cal-cn">Shanghai</div></td>
+            <td class="p-1"><div class="cal cal-sea">Melbourne<br/>Tasmania</div></td>
+            <td class="p-1"><div class="cal cal-cn">Shandong</div></td>
           </tr>
           <tr>
             <td class="mth py-1">Feb</td>
-            <td class="p-1"><div class="cal cal-cn">上海</div></td>
-            <td class="p-1"><div class="cal cal-sea">塔斯马尼亚</div></td>
-            <td class="p-1"><div class="cal cal-cn">山东</div></td>
+            <td class="p-1"><div class="cal cal-cn">Shanghai</div></td>
+            <td class="p-1"><div class="cal cal-sea">Tasmania</div></td>
+            <td class="p-1"><div class="cal cal-cn">Shandong</div></td>
           </tr>
           <tr>
             <td class="mth py-1">Mar</td>
-            <td class="p-1"><div class="cal cal-cn">上海</div></td>
-            <td class="p-1"><div class="cal cal-sea">悉尼<br/>新西兰</div></td>
-            <td class="p-1"><div class="cal" style="background:#fde8f0;color:#7a1840;">海南</div></td>
+            <td class="p-1"><div class="cal cal-cn">Shanghai</div></td>
+            <td class="p-1"><div class="cal cal-sea">Sydney<br/>New Zealand</div></td>
+            <td class="p-1"><div class="cal" style="background:#fde8f0;color:#7a1840;">Hainan</div></td>
           </tr>
           <tr>
             <td class="mth py-1">Apr</td>
-            <td class="p-1"><div class="cal cal-cn">上海</div></td>
-            <td class="p-1"><div class="cal cal-cn">济宁</div></td>
+            <td class="p-1"><div class="cal cal-cn">Shanghai</div></td>
+            <td class="p-1"><div class="cal cal-cn">Jining</div></td>
             <td class="p-1"><div class="cal empty" style="height:44px;"></div></td>
           </tr>
           <tr>
             <td class="mth py-1">May</td>
-            <td class="p-1"><div class="cal cal-au">悉尼<br/>凯恩斯</div></td>
-            <td class="p-1"><div class="cal cal-cn">济宁</div></td>
+            <td class="p-1"><div class="cal cal-au">Sydney<br/>Cairns</div></td>
+            <td class="p-1"><div class="cal cal-cn">Jining</div></td>
             <td class="p-1"><div class="cal empty" style="height:44px;"></div></td>
           </tr>
           <tr>
             <td class="mth py-1">Jun</td>
-            <td class="p-1"><div class="cal cal-au">圣灵群岛<br/>布里斯班</div></td>
-            <td class="p-1"><div class="cal cal-cn">济宁</div></td>
+            <td class="p-1"><div class="cal cal-au">Whitsundays<br/>Brisbane</div></td>
+            <td class="p-1"><div class="cal cal-cn">Jining</div></td>
             <td class="p-1"><div class="cal empty" style="height:44px;"></div></td>
           </tr>
           <tr>
             <td class="mth py-1">Jul</td>
-            <td class="p-1"><div class="cal cal-sea">印尼<br/>新加坡</div></td>
-            <td class="p-1"><div class="cal cal-th">清迈</div></td>
+            <td class="p-1"><div class="cal cal-sea">Indonesia<br/>Singapore</div></td>
+            <td class="p-1"><div class="cal cal-th">Chiang Mai</div></td>
             <td class="p-1"><div class="cal empty" style="height:44px;"></div></td>
           </tr>
           <tr>
             <td class="mth py-1">Aug</td>
-            <td class="p-1"><div class="cal cal-cn">云南</div></td>
-            <td class="p-1"><div class="cal cal-no">挪威</div></td>
+            <td class="p-1"><div class="cal cal-cn">Yunnan</div></td>
+            <td class="p-1"><div class="cal cal-no">Norway</div></td>
             <td class="p-1"><div class="cal empty" style="height:44px;"></div></td>
           </tr>
           <tr>
             <td class="mth py-1">Sep</td>
-            <td class="p-1"><div class="cal cal-th">清迈</div></td>
-            <td class="p-1"><div class="cal cal-no">挪威</div></td>
+            <td class="p-1"><div class="cal cal-th">Chiang Mai</div></td>
+            <td class="p-1"><div class="cal cal-no">Norway</div></td>
             <td class="p-1"><div class="cal empty" style="height:44px;"></div></td>
           </tr>
           <tr>
             <td class="mth py-1">Oct</td>
-            <td class="p-1"><div class="cal cal-my">马来西亚</div></td>
-            <td class="p-1"><div class="cal cal-ice">冰岛<br/>丹麦</div></td>
+            <td class="p-1"><div class="cal cal-my">Malaysia</div></td>
+            <td class="p-1"><div class="cal cal-ice">Iceland<br/>Denmark</div></td>
             <td class="p-1"><div class="cal empty" style="height:44px;"></div></td>
           </tr>
           <tr>
             <td class="mth py-1">Nov</td>
-            <td class="p-1"><div class="cal cal-au">珀斯</div></td>
-            <td class="p-1"><div class="cal cal-no">挪威</div></td>
+            <td class="p-1"><div class="cal cal-au">Perth</div></td>
+            <td class="p-1"><div class="cal cal-no">Norway</div></td>
             <td class="p-1"><div class="cal empty" style="height:44px;"></div></td>
           </tr>
           <tr>
             <td class="mth py-1">Dec</td>
-            <td class="p-1"><div class="cal cal-au">珀斯</div></td>
-            <td class="p-1"><div class="cal cal-de">德国<br/>荷兰</div></td>
+            <td class="p-1"><div class="cal cal-au">Perth</div></td>
+            <td class="p-1"><div class="cal cal-de">Germany<br/>Netherlands</div></td>
             <td class="p-1"><div class="cal empty" style="height:44px;"></div></td>
           </tr>
         </tbody>
       </table>
     </div>
 
-
   </main>
 
   <footer class="border-t border-stone-200">
     <div class="max-w-5xl mx-auto px-6 py-8 flex justify-between items-center text-xs text-stone-300 font-light">
-      <span>魏蓝 Valen</span>
-      <a href="index.html" class="hover:text-stone-500 transition-colors">← 返回首页</a>
+      <span>© 2026 Valen Wei</span>
+      <span>Made with care</span>
     </div>
   </footer>
 

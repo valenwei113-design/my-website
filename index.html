@@ -1,322 +1,60 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的个人网站</title>
+  <title>Valen Wei</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
   <style>
     body { font-family: 'Inter', sans-serif; }
     h1, h2 { font-family: 'Playfair Display', serif; }
-    .section-divider { border-top: 1px solid #e7e5e4; }
   </style>
 </head>
-<body class="bg-stone-50 text-stone-800">
+<body class="bg-stone-50 text-stone-800 h-screen flex flex-col overflow-hidden">
 
-  <!-- 导航 -->
-  <nav class="fixed top-0 w-full bg-stone-50/90 backdrop-blur-sm z-10 border-b border-stone-200">
-    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-      <span class="text-sm font-light tracking-widest uppercase text-stone-500">Portfolio</span>
-      <div class="flex items-center gap-8 text-sm text-stone-500 font-light">
-        <a href="#about" class="hover:text-stone-800 transition-colors">About</a>
-        <a href="#travel" class="hover:text-stone-800 transition-colors">Travel</a>
-        <a href="#hobbies" class="hover:text-stone-800 transition-colors">Hobbies</a>
-        <a href="#projects" class="hover:text-stone-800 transition-colors">Projects</a>
-        <a href="calendar.html" class="text-xs px-3 py-1 border border-stone-300 rounded-full text-stone-500 hover:border-stone-500 hover:text-stone-700 transition-colors tracking-wide" style="font-family:'Playfair Display',serif;">数字游民日历</a>
-      </div>
+  <!-- Nav -->
+  <nav class="border-b border-stone-200 bg-stone-50">
+    <div class="max-w-5xl mx-auto px-6 py-4 flex justify-center items-center gap-8 text-sm text-stone-500 font-light">
+      <a href="travel.html" class="hover:text-stone-800 transition-colors">Travel</a>
+      <a href="hobbies.html" class="hover:text-stone-800 transition-colors">Hobbies</a>
+      <a href="projects.html" class="hover:text-stone-800 transition-colors">Projects</a>
+      <a href="calendar.html" class="hover:text-stone-800 transition-colors">Calendar</a>
     </div>
   </nav>
 
-  <main class="max-w-5xl mx-auto px-6">
-
-    <!-- 第一部分：个人信息 -->
-    <section id="about" class="min-h-screen flex flex-col justify-center pt-24 pb-20">
-      <p class="text-sm tracking-widest uppercase text-stone-400 mb-6">Hello, I'm</p>
-      <h1 class="text-6xl font-bold text-stone-900 mb-6 leading-tight">魏蓝 Valen</h1>
-      <div class="flex gap-8 text-sm text-stone-500">
-        <div>
-          <p class="font-medium text-stone-800">Email</p>
-          <a href="mailto:valenwei113@gmail.com" class="font-light hover:text-stone-800 transition-colors">valenwei113@gmail.com</a>
-        </div>
-        <div>
-          <p class="font-medium text-stone-800">LinkedIn</p>
-          <a href="https://www.linkedin.com/in/lan-w-73a82b178/" target="_blank" class="font-light hover:text-stone-800 transition-colors">linkedin.com/in/lan-w</a>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- 第二部分：旅行经历 -->
-    <section id="travel" class="py-24">
-      <p class="text-sm tracking-widest uppercase text-stone-400 mb-4">Wanderlust</p>
-      <h2 class="text-4xl font-bold text-stone-900 mb-4">旅行经历</h2>
-      <p class="text-stone-500 font-light mb-14 max-w-lg">走过的地方塑造了我的视野。</p>
-
-<div class="mb-14 flex items-baseline gap-3">
-        <span class="text-5xl font-bold text-stone-900" style="font-family:'Playfair Display',serif;">20</span>
-        <span class="text-stone-400 font-light">个国家 · 3 大洲</span>
-      </div>
-
-      <!-- 欧洲 -->
-      <div class="mb-10">
-        <p class="text-xs tracking-widest uppercase text-stone-400 mb-4">Europe · 欧洲 <span class="ml-2 text-stone-300">14</span></p>
-        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3">
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇩🇪</span><span class="text-sm font-light text-stone-700">德国</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇳🇴</span><span class="text-sm font-light text-stone-700">挪威</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇦🇹</span><span class="text-sm font-light text-stone-700">奥地利</span>
-          </div>
-          <div onclick="toggleIceland()" id="iceland-card" class="cursor-pointer flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇮🇸</span><span class="text-sm font-light text-stone-700">冰岛</span><span class="ml-auto text-xs text-stone-300" id="iceland-arrow">↓</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇫🇷</span><span class="text-sm font-light text-stone-700">法国</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇮🇹</span><span class="text-sm font-light text-stone-700">意大利</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇨🇿</span><span class="text-sm font-light text-stone-700">捷克</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇫🇮</span><span class="text-sm font-light text-stone-700">芬兰</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇸🇪</span><span class="text-sm font-light text-stone-700">瑞典</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇪🇪</span><span class="text-sm font-light text-stone-700">爱沙尼亚</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇷🇺</span><span class="text-sm font-light text-stone-700">俄罗斯</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇵🇱</span><span class="text-sm font-light text-stone-700">波兰</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇩🇰</span><span class="text-sm font-light text-stone-700">丹麦</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇳🇱</span><span class="text-sm font-light text-stone-700">荷兰</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 冰岛行程（展开） -->
-      <div id="iceland-itinerary" class="hidden mt-4 mb-10 border border-stone-200 rounded-sm overflow-hidden">
-        <div class="grid md:grid-cols-5 border-b border-stone-100">
-          <div class="md:col-span-1 bg-stone-50 px-5 py-4 flex flex-col justify-start border-b md:border-b-0 md:border-r border-stone-100">
-            <p class="text-xs tracking-widest uppercase text-stone-400">Day 1</p>
-            <p class="text-sm font-medium text-stone-700 mt-1">Oct 5</p>
-            <p class="text-xs text-stone-400 font-light">傍晚抵达 · Arrive</p>
-          </div>
-          <div class="md:col-span-4 px-5 py-4 space-y-2">
-            <div class="flex justify-between text-sm"><span class="text-stone-700">提车</span><span class="text-stone-400 font-light">Pick up car · Zerocar · 19:00</span></div>
-            <div class="flex justify-between text-sm"><span class="text-stone-700">超市采购</span><span class="text-stone-400 font-light">Grocery · Hagkaup</span></div>
-            <div class="pt-1 text-xs text-stone-400">🏨 Old Town Reykjavik</div>
-          </div>
-        </div>
-        <div class="grid md:grid-cols-5 border-b border-stone-100">
-          <div class="md:col-span-1 bg-stone-50 px-5 py-4 flex flex-col justify-start border-b md:border-b-0 md:border-r border-stone-100">
-            <p class="text-xs tracking-widest uppercase text-stone-400">Day 2</p>
-            <p class="text-sm font-medium text-stone-700 mt-1">Oct 6</p>
-            <p class="text-xs text-stone-400 font-light">首都 · Reykjavik</p>
-          </div>
-          <div class="md:col-span-4 px-5 py-4 space-y-2">
-            <div class="flex justify-between text-sm"><span class="text-stone-700">观鲸</span><span class="text-stone-400 font-light">Whale Watching · 09:00</span></div>
-            <div class="flex justify-between text-sm"><span class="text-stone-700">逛市区</span><span class="text-stone-400 font-light">Explore the City Center</span></div>
-            <div class="pt-1 text-xs text-stone-400">🏨 100 Iceland Hotel</div>
-          </div>
-        </div>
-        <div class="grid md:grid-cols-5 border-b border-stone-100">
-          <div class="md:col-span-1 bg-stone-50 px-5 py-4 flex flex-col justify-start border-b md:border-b-0 md:border-r border-stone-100">
-            <p class="text-xs tracking-widest uppercase text-stone-400">Day 3</p>
-            <p class="text-sm font-medium text-stone-700 mt-1">Oct 7</p>
-            <p class="text-xs text-stone-400 font-light">南海岸 · South Coast</p>
-          </div>
-          <div class="md:col-span-4 px-5 py-4 space-y-2">
-            <div class="flex justify-between text-sm"><span class="text-stone-700">赛里雅兰瀑布</span><span class="text-stone-400 font-light">Seljalandsfoss</span></div>
-            <div class="flex justify-between text-sm"><span class="text-stone-700">斯科鲁特加瀑布</span><span class="text-stone-400 font-light">Skógafoss</span></div>
-            <div class="flex justify-between text-sm"><span class="text-stone-700">雷尼思黑沙滩</span><span class="text-stone-400 font-light">Reynisfjara Black Sand Beach</span></div>
-            <div class="flex justify-between text-sm"><span class="text-stone-700">羽毛峡谷</span><span class="text-stone-400 font-light">Fjaðrárgljúfur Canyon</span></div>
-            <div class="pt-1 text-xs text-stone-400">🏨 Ferðaþjónustan Fossárdal</div>
-          </div>
-        </div>
-        <div class="grid md:grid-cols-5 border-b border-stone-100">
-          <div class="md:col-span-1 bg-stone-50 px-5 py-4 flex flex-col justify-start border-b md:border-b-0 md:border-r border-stone-100">
-            <p class="text-xs tracking-widest uppercase text-stone-400">Day 4</p>
-            <p class="text-sm font-medium text-stone-700 mt-1">Oct 8</p>
-            <p class="text-xs text-stone-400 font-light">冰川 · Glacier</p>
-          </div>
-          <div class="md:col-span-4 px-5 py-4 space-y-2">
-            <div class="flex justify-between text-sm"><span class="text-stone-700">冰河湖游船</span><span class="text-stone-400 font-light">Jökulsárlón Glacier Lagoon</span></div>
-            <div class="flex justify-between text-sm"><span class="text-stone-700">钻石沙滩</span><span class="text-stone-400 font-light">Diamond Beach</span></div>
-            <div class="pt-1 text-xs text-stone-400">🏨 Old Town Reykjavik</div>
-          </div>
-        </div>
-        <div class="grid md:grid-cols-5 border-b border-stone-100">
-          <div class="md:col-span-1 bg-stone-50 px-5 py-4 flex flex-col justify-start border-b md:border-b-0 md:border-r border-stone-100">
-            <p class="text-xs tracking-widest uppercase text-stone-400">Day 5</p>
-            <p class="text-sm font-medium text-stone-700 mt-1">Oct 9</p>
-            <p class="text-xs text-stone-400 font-light">黄金圈 · Golden Circle</p>
-          </div>
-          <div class="md:col-span-4 px-5 py-4 space-y-2">
-            <div class="flex justify-between text-sm"><span class="text-stone-700">黄金瀑布</span><span class="text-stone-400 font-light">Gullfoss Waterfall · 12:30</span></div>
-            <div class="flex justify-between text-sm"><span class="text-stone-700">间歇泉</span><span class="text-stone-400 font-light">Geysir · 13:00</span></div>
-            <div class="flex justify-between text-sm"><span class="text-stone-700">Silfra 浮潜</span><span class="text-stone-400 font-light">Silfra Snorkeling · 15:00</span></div>
-            <div class="flex justify-between text-sm"><span class="text-stone-700">温泉</span><span class="text-stone-400 font-light">Sky Lagoon · 19:30</span></div>
-            <div class="pt-1 text-xs text-stone-400">🏨 Old Town Reykjavik</div>
-          </div>
-        </div>
-        <div class="grid md:grid-cols-5">
-          <div class="md:col-span-1 bg-stone-50 px-5 py-4 flex flex-col justify-start md:border-r border-stone-100">
-            <p class="text-xs tracking-widest uppercase text-stone-400">Day 6</p>
-            <p class="text-sm font-medium text-stone-700 mt-1">Oct 10</p>
-            <p class="text-xs text-stone-400 font-light">早晨离开 · Depart</p>
-          </div>
-          <div class="md:col-span-4 px-5 py-4">
-            <p class="text-sm text-stone-500 font-light">早晨离开冰岛 · Morning departure from Reykjavik</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- 亚洲 -->
-      <div class="mb-10">
-        <p class="text-xs tracking-widest uppercase text-stone-400 mb-4">Asia · 亚洲 <span class="ml-2 text-stone-300">4</span></p>
-        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3">
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇹🇭</span><span class="text-sm font-light text-stone-700">泰国</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇮🇩</span><span class="text-sm font-light text-stone-700">印尼</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇸🇬</span><span class="text-sm font-light text-stone-700">新加坡</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇲🇾</span><span class="text-sm font-light text-stone-700">马来西亚</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 大洋洲 -->
-      <div>
-        <p class="text-xs tracking-widest uppercase text-stone-400 mb-4">Oceania · 大洋洲 <span class="ml-2 text-stone-300">2</span></p>
-        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-3">
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇦🇺</span><span class="text-sm font-light text-stone-700">澳大利亚</span>
-          </div>
-          <div class="flex items-center gap-3 border border-stone-200 px-4 py-3 rounded-sm hover:border-stone-400 transition-colors">
-            <span class="text-2xl">🇳🇿</span><span class="text-sm font-light text-stone-700">新西兰</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- 第三部分：爱好 -->
-    <section id="hobbies" class="py-24">
-      <p class="text-sm tracking-widest uppercase text-stone-400 mb-4">Interests</p>
-      <h2 class="text-4xl font-bold text-stone-900 mb-4">我的爱好</h2>
-      <p class="text-stone-500 font-light mb-14 max-w-lg">工作之外，这些事情让我保持热情。</p>
-
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-        <div class="border border-stone-200 p-6 rounded-sm hover:border-stone-400 transition-colors">
-          <div class="text-3xl mb-4">📷</div>
-          <h3 class="font-medium text-stone-800 mb-2">摄影</h3>
-          <p class="text-sm text-stone-500 font-light">记录旅途中的光与影</p>
-        </div>
-        <div class="border border-stone-200 p-6 rounded-sm hover:border-stone-400 transition-colors">
-          <div class="text-3xl mb-4">📚</div>
-          <h3 class="font-medium text-stone-800 mb-2">阅读</h3>
-          <p class="text-sm text-stone-500 font-light">历史、哲学与科幻小说</p>
-        </div>
-        <div class="border border-stone-200 p-6 rounded-sm hover:border-stone-400 transition-colors">
-          <div class="text-3xl mb-4">🎵</div>
-          <h3 class="font-medium text-stone-800 mb-2">音乐</h3>
-          <p class="text-sm text-stone-500 font-light">古典乐与独立摇滚</p>
-        </div>
-        <div class="border border-stone-200 p-6 rounded-sm hover:border-stone-400 transition-colors">
-          <div class="text-3xl mb-4">🍳</div>
-          <h3 class="font-medium text-stone-800 mb-2">烹饪</h3>
-          <p class="text-sm text-stone-500 font-light">尝试各国料理</p>
-        </div>
-      </div>
-    </section>
-
-    <div class="section-divider"></div>
-
-    <!-- 第四部分：IT 项目 -->
-    <section id="projects" class="py-24">
-      <p class="text-sm tracking-widests uppercase text-stone-400 mb-4">Work</p>
-      <h2 class="text-4xl font-bold text-stone-900 mb-4">我的 IT 项目</h2>
-      <p class="text-stone-500 font-light mb-14 max-w-lg">用代码解决真实问题。</p>
-
-      <div class="space-y-6">
-        <div class="flex flex-col md:flex-row md:items-center justify-between p-8 border border-stone-200 rounded-sm hover:border-stone-400 transition-colors">
-          <div>
-            <h3 class="font-medium text-stone-800 text-lg mb-2">项目名称 01</h3>
-            <p class="text-stone-500 font-light text-sm max-w-md">简短描述这个项目做了什么，解决了什么问题。</p>
-            <div class="flex gap-2 mt-3">
-              <span class="text-xs border border-stone-300 text-stone-500 px-2 py-1 rounded-sm">React</span>
-              <span class="text-xs border border-stone-300 text-stone-500 px-2 py-1 rounded-sm">Node.js</span>
+  <!-- About -->
+  <main class="flex-1 flex items-center">
+    <div class="max-w-5xl mx-auto px-6 w-full">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-12">
+        <div class="flex-1">
+          <p class="text-sm tracking-widest uppercase text-stone-400 mb-6">Hello, I'm</p>
+          <h1 class="text-6xl font-bold text-stone-900 mb-6 leading-tight">Valen Wei</h1>
+          <div class="flex gap-8 text-sm text-stone-500">
+            <div>
+              <p class="font-medium text-stone-800">Email</p>
+              <a href="mailto:valenwei113@gmail.com" class="font-light hover:text-stone-800 transition-colors">valenwei113@gmail.com</a>
+            </div>
+            <div>
+              <p class="font-medium text-stone-800">LinkedIn</p>
+              <a href="https://www.linkedin.com/in/lan-w-73a82b178/" target="_blank" class="font-light hover:text-stone-800 transition-colors">linkedin.com/in/lan-w</a>
             </div>
           </div>
-          <a href="#" class="mt-4 md:mt-0 text-sm text-stone-400 hover:text-stone-800 transition-colors font-light">查看项目 →</a>
         </div>
-
-        <div class="flex flex-col md:flex-row md:items-center justify-between p-8 border border-stone-200 rounded-sm hover:border-stone-400 transition-colors">
-          <div>
-            <h3 class="font-medium text-stone-800 text-lg mb-2">项目名称 02</h3>
-            <p class="text-stone-500 font-light text-sm max-w-md">简短描述这个项目做了什么，解决了什么问题。</p>
-            <div class="flex gap-2 mt-3">
-              <span class="text-xs border border-stone-300 text-stone-500 px-2 py-1 rounded-sm">Python</span>
-              <span class="text-xs border border-stone-300 text-stone-500 px-2 py-1 rounded-sm">PostgreSQL</span>
-            </div>
-          </div>
-          <a href="#" class="mt-4 md:mt-0 text-sm text-stone-400 hover:text-stone-800 transition-colors font-light">查看项目 →</a>
-        </div>
-
-        <div class="flex flex-col md:flex-row md:items-center justify-between p-8 border border-stone-200 rounded-sm hover:border-stone-400 transition-colors">
-          <div>
-            <h3 class="font-medium text-stone-800 text-lg mb-2">项目名称 03</h3>
-            <p class="text-stone-500 font-light text-sm max-w-md">简短描述这个项目做了什么，解决了什么问题。</p>
-            <div class="flex gap-2 mt-3">
-              <span class="text-xs border border-stone-300 text-stone-500 px-2 py-1 rounded-sm">Vue</span>
-              <span class="text-xs border border-stone-300 text-stone-500 px-2 py-1 rounded-sm">TypeScript</span>
-            </div>
-          </div>
-          <a href="#" class="mt-4 md:mt-0 text-sm text-stone-400 hover:text-stone-800 transition-colors font-light">查看项目 →</a>
+        <div class="flex-shrink-0">
+          <img src="Lan Wei.jpg" alt="Valen Wei" class="w-56 h-56 object-cover rounded-sm border border-stone-200" />
         </div>
       </div>
-    </section>
-
+    </div>
   </main>
 
-  <!-- 页脚 -->
-  <footer class="border-t border-stone-200 mt-10">
-    <div class="max-w-5xl mx-auto px-6 py-10 flex justify-between items-center text-sm text-stone-400 font-light">
-      <span>© 2026 魏蓝 Valen</span>
+  <!-- Footer -->
+  <footer class="border-t border-stone-200">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex justify-between items-center text-xs text-stone-300 font-light">
+      <span>© 2026 Valen Wei</span>
       <span>Made with care</span>
     </div>
   </footer>
 
-  <script>
-    function toggleIceland() {
-      const itinerary = document.getElementById('iceland-itinerary');
-      const arrow = document.getElementById('iceland-arrow');
-      const card = document.getElementById('iceland-card');
-      const isHidden = itinerary.classList.toggle('hidden');
-      arrow.textContent = isHidden ? '↓' : '↑';
-      card.classList.toggle('border-stone-400', !isHidden);
-    }
-  </script>
 </body>
 </html>
