@@ -1,9 +1,10 @@
 .DS_Store
 *.DS_Store
 
-# Large media files — serve locally, not tracked in git
-vlog/
-discovery/
-home/*.mp3
-home/*.m4a
-cairns/
+# Large media — videos and audio not tracked in git
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.mp3
+*.m4a
